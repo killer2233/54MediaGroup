@@ -8,7 +8,7 @@ import { ChevronDown } from 'lucide-react'
 
 export default function NavBar() {
   const [otherOpen, setOtherOpen] = useState(false)
-  const closeTimer = useRef<NodeJS.Timeout>()
+  const closeTimer = useRef<NodeJS.Timeout | null>(null)
 
   const openMenu = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current)

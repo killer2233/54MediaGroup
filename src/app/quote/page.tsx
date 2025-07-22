@@ -1,12 +1,12 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
-import QuoteSection from '../component/QuoteSection/QuoteSection'
-
+import { Suspense } from 'react'
+import QuotePageInner from './QuotePageInner'
 
 export default function QuotePage() {
-  const params = useSearchParams()
-  const initialService = params.get('service') ?? undefined
-
-  return <QuoteSection initialService={initialService} />
+  return (
+    <Suspense fallback={<div>Loading quote form…</div>}>
+      <QuotePageInner />
+    </Suspense>
+  )
 }

@@ -36,7 +36,7 @@ export default function HeroSection() {
           "
         >
           We transform your <br />
-          <span className="text-[#8D3BFA]">
+          <span className="text-[#4C07EF]">
             vision into a digital masterpiece.
           </span>
         </h1>
@@ -61,7 +61,7 @@ export default function HeroSection() {
           <Link href="/services">
             <button
               className="
-        bg-[#8D3BFA] hover:bg-[#7229d8] text-white
+        bg-[#4C07EF] hover:bg-[#7229d8] text-white
         px-8 py-4 rounded-md
         text-[clamp(1rem,1vw,1.25rem)]
         4k:text-[1.5rem]

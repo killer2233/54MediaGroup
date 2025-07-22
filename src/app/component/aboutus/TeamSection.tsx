@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 export default function TeamSection() {
-  const members = ['1','2','3','4','5','6']
+  const members = ['1','2','3','5','6']
 
   return (
     <section className="py-20 bg-white">

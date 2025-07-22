@@ -92,12 +92,12 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-900">
           Our Simple Affordable Prices
         </h1>
-        <p className="text-gray-600 mt-2">
+        <p className="text-gray-600 dark:text-gray-600 mt-2">
           This will show the pricing we do for all of our services.
         </p>
       </div>
@@ -107,14 +107,20 @@ export default function ServicesSection() {
           <div
             key={svc.id}
             className={`
-              flex flex-col border rounded-lg p-6
+              flex flex-col border rounded-lg p-6 bg-white dark:bg-white
               ${svc.variant === 'outline' ? 'border-purple-600' : 'border-gray-200'}
             `}
           >
-            <h2 className="text-lg font-semibold">{svc.name}</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-900">
+              {svc.name}
+            </h2>
             <div className="mt-4 flex items-baseline justify-between">
-              <span className="text-4xl font-bold">${svc.price}</span>
-              <span className="text-sm text-gray-500">Starting at</span>
+              <span className="text-4xl font-bold text-gray-900 dark:text-gray-900">
+                ${svc.price}
+              </span>
+              <span className="text-sm text-gray-500 dark:text-gray-500">
+                Starting at
+              </span>
             </div>
 
             <Link
@@ -132,10 +138,10 @@ export default function ServicesSection() {
               Get Quote
             </Link>
 
-            <ul className="mt-6 space-y-3 flex-1 text-sm text-gray-700">
+            <ul className="mt-6 space-y-3 flex-1 text-sm text-gray-700 dark:text-gray-700">
               {svc.features.map((feat, i) => (
                 <li key={i} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mt-1" />
+                  <Check className="w-5 h-5 text-green-500 dark:text-green-500 mt-1" />
                   <span className="ml-2">{feat}</span>
                 </li>
               ))}
